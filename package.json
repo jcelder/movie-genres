@@ -2,9 +2,11 @@
   "name": "movie-genres",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "export NODE_ENV='test' && nyc mocha",
+    "start": "node",
+    "dev:start": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,12 @@
     "express": "^4.16.2",
     "pg-promise": "^7.2.0",
     "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "nyc": "^11.3.0",
+    "pg-monitor": "^0.8.3"
   }
 }
