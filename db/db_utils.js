@@ -8,11 +8,8 @@ const getUser = (email) => {
   return db.one('SELECT * FROM users WHERE email=$1', [email])
 }
 
-const getMovies = () => {
-  return db.any('SELECT title FROM movies ORDER BY title')
-}
 
 
 
 
-module.exports = { addUser, getUser, getMovies }
+module.exports = { addUser, getUser, }
