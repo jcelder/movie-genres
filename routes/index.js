@@ -43,7 +43,7 @@ router.post('/signup', (req, res) => {
           res.redirect('/')
         })
         .catch(err => {
-          console.log('ERROR :: ===>', err);
+          // console.log('ERROR :: ===>', err);
           res.render('signup', {
             title: 'Sign Up',
             error: 'Could not add user to db'

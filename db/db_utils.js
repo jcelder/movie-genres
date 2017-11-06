@@ -1,7 +1,7 @@
 const { db } = require('./db_connection')
 
 const addUser = (email, hash) => {
-  return db.one('INSERT INTO users (email, password) VALUES ($1, $2) RETURNING *', [email, hash])
+  return db.one('INSERT INTO users (email, password) VALUES ($1, $2) RETURNING users.email', [email, hash])
 }
 
 const getUser = (email) => {
