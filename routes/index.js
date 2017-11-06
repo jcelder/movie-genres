@@ -3,7 +3,7 @@ const router = express.Router()
 const bcrypt = require('bcrypt')
 const saltRounds = 10;
 const bodyParser = require('body-parser')
-// 
+//
 const {addUser, getUser, getMovies} = require('../db/db_utils');
 
 
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   })
 })
 
-//signup page - GET 
+//signup page - GET
 router.get('/signup', (req, res) => {
   res.render('signup', {
     title: 'Sign Up',
@@ -23,13 +23,13 @@ router.get('/signup', (req, res) => {
   })
 })
 
-//signup page - POST 
+//signup page - POST
 router.post('/signup', (req, res) => {
   const {
     email,
     password
-  } = req.body 
-  
+  } = req.body
+
   if(!(email || password)) {
     res.render('signup', {
       title: 'Sign Up',
@@ -53,7 +53,7 @@ router.post('/signup', (req, res) => {
   }
 })
 
-//loging page - GET 
+//loging page - GET
 router.get('/login', (req, res) => {
   res.render('login', {
     title: 'Log In',
@@ -62,12 +62,12 @@ router.get('/login', (req, res) => {
   })
 })
 
-//login page - POST 
+//login page - POST
 router.post('/login', (req, res) => {
   const {
     email,
-    password 
-  } = req.body 
+    password
+  } = req.body
   if(!(email || password)) {
     res.render('login', {
       title: 'Log In',
