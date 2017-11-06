@@ -9,7 +9,7 @@ const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(cookieParser)
+app.use(cookieParser())
 
 app.use(session({
   name: 'session',
@@ -38,9 +38,6 @@ app.use((err, req, res, next) => {
   })
 })
 
-// 
-// 
-// 
 app.listen(3000, () => {
   console.log('Application running on localhost:3000')
 })
