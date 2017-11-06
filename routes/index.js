@@ -4,9 +4,10 @@ const bcrypt = require('bcrypt')
 const saltRounds = 10;
 const bodyParser = require('body-parser')
 // 
-// 
+const {addUser, getUser, getMovies} = require('../db/db_utils');
+
+
 router.get('/', (req, res) => {
-  // res.send('Test message please ignore')
   return res.render('index', {
     email: req.session.userID
   })

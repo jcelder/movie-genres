@@ -13,4 +13,4 @@ const getMovies = () => {
 }
 
 
-module.exports = { addUser, getUser, }
+module.exports = { addUser, getUser, getMovies }

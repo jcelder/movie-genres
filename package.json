@@ -7,7 +7,7 @@
     "test": "export NODE_ENV='test' && nyc mocha",
     "start": "node",
     "dev:start": "nodemon",
-    "db:create": "createdb moviegenres && psql < db/schema.sql",
+    "db:create": "createdb moviegenres && psql moviegenres < db/schema.sql",
     "db:reset": "dropdb moviegenres && npm run db:create",
     "db:test:create": "createdb moviegenres_test && psql moviegenres_test < db/schema.sql",
     "db:test:reset": "dropdb moviegenres_test && npm run db:test:create"

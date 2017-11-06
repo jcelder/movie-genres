@@ -2,12 +2,14 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('cookie-session')
+const cookieParser = require('cookie-parser')
 const routes = require('./routes/index')
 // 
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cookieParser)
 
 app.use(session({
   name: 'session',
