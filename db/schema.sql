@@ -14,7 +14,8 @@ CREATE TABLE genres(
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   email TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL
+  password TEXT NOT NULL,
+  sessionID TEXT UNIQUE NOT NULL
 );
 
 CREATE TABLE favorites(
