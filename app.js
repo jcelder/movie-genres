@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const session = require('cookie-session')
 const cookieParser = require('cookie-parser')
 const routes = require('./routes/index')
-// 
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -18,11 +17,11 @@ app.use(session({
 
 
 app.use(express.static(__dirname + '/public'))
-// 
+//
 app.set('view engine', 'pug')
-// 
+//
 app.use('/', routes)
-// 
+//
 app.use((req, res, next) => {
   const err = new Error('File not found')
   err.status = 404;
