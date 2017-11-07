@@ -1,14 +1,21 @@
 const pgp = require('pg-promise')()
 
-//delete these lines from production code 
+const pg_options = {}
+// delete these lines from production code
 const monitor = require('pg-monitor')
-monitor.attach({})
+monitor.attach(pg_options)
 
-const connection = process.env.NODE_ENV === 'test'
-  ? 'postgres:///moviegenres_test'
-  : 'postgres:///moviegenres'
+const connectionOptions = {
+  host: 'localhost',
+  port: 5432,
+  database: process.env.NODE_ENV === 'test'
+    ? 'moviegenres_test'
+    : 'moviegenres',
+}
 
-const db = pgp(connection)
+
+const db = pgp(connectionOptions)
+
 
 const closeConnection = () => {
   pgp.end()
