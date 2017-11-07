@@ -4,14 +4,30 @@ const bcrypt = require('bcrypt')
 const saltRounds = 10;
 const bodyParser = require('body-parser')
 //
-const {addUser, getUser, getMovies} = require('../db/db_utils');
+const { addUser, getUser, getMovies, getFavorites } = require('../db/db_utils');
 
 
 router.get('/', (req, res) => {
   // res.send('hello');
-  return res.render('index', {
-    email: req.session.userID
-  })
+  const userEmail = req.session.userID
+  getFavorites(userEmail)
+    .then((favoriteMovies) => {
+      return res.render('index', {
+        email: req.session.userID,
+        favorites: favoriteMovies,
+      })
+    })
+
+})
+
+router.get('/movie-titles', (req, res) => {
+  getMovies()
+    .then((movieData) => {
+      return res.render('index', {
+        email: req.session.userID,
+        movies: movieData,
+      })
+    })
 })
 
 //signup page - GET
