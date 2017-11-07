@@ -14,7 +14,9 @@ block content
       a#logoutlink(href='logout') Log Out
 
       div#responseContainer
-
+        ul
+          each favorite in favorites
+            li= favorite.title
 
 
     else
