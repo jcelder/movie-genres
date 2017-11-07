@@ -2,8 +2,7 @@ CREATE TABLE movies(
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL,
   ratingAverage REAL NOT NULL,
-  releaseDate DATE NOT NULL,
-  genreIDs INT ARRAY
+  releaseDate DATE NOT NULL
 );
 
 CREATE TABLE genres(
@@ -21,4 +20,10 @@ CREATE TABLE favorites(
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   movie_id INT NOT NULL
+);
+
+CREATE TABLE movie_genres(
+  id SERIAL PRIMARY KEY,
+  movie_id INTEGER REFERENCES movies (id),
+  genre_id INTEGER REFERENCES genres (id)
 );

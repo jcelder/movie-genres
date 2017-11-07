@@ -10,6 +10,10 @@ const getUser = (email) => {
   return db.one('SELECT * FROM users WHERE email=$1', [email])
 }
 
+const getDetailedMovieInfo = (title) => {
+  return db.one('SELECT movies.title, movies.ratingAverage, FROM movies WHERE movies.title=$1', [title])
+}
+
 const getMovies = () => {
   return db.any('SELECT movies.title FROM movies ORDER BY movies.title')
 }
