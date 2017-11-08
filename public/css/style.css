@@ -5,11 +5,18 @@ body {
   font-size: 16px;
 }
 
-form {
-  width: 30%;
+h2, h4 {
+  text-align: center;
 }
 
-label {
+header {
+  height: 100px;
+}
+/*form {
+  width: 30%;
+}*/
+
+/*label {
   display: inline-block;
   width: 25%;
 }
@@ -25,29 +32,36 @@ input#searchField {
   display: inline-block;
   width: 70%;
   box-shadow: 2px 2px;
-}
+}*/
 
 button {
   display: block;
   box-shadow: 2px 2px;
   padding: 5px 10px;
-  margin: 5px 150px 0;
+  margin: 25px 10px;
   background-color: white;
   border: 1px solid black;
-  font-size: 12px;
+  font-size: 20px;
 }
 
-button#searchBtn {
-  display: inline-block;
-  margin: 5px;
+button#getMovies {
+  float: left;
 }
 
-a {
+button#getGenres {
+  float: left;
+}
+
+button#logout {
+  float: right;
+}
+
+/*a {
   display: block;
   margin: 15px;
-}
+}*/
 
-table, td, th {
+/*table, td, th {
   border: 2px solid black;
   border-collapse: collapse;
   padding: 5px;
@@ -56,17 +70,17 @@ table, td, th {
 th {
   background-color: lightgray;
   text-align: center;
-}
+}*/
 
 p {
   color: red;
 }
 
-li.movieInfo {
+/*li.movieInfo {
   color: blue;
   padding: 5px;
 }
 
 li.movieInfo a {
   display: inline;
-}
+}*/

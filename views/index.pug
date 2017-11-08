@@ -3,6 +3,14 @@ block content
   h1 #{title}
     if email
       h2 Welcome back #{email}
+      header
+        button#logout(type='submit') Log Out
+
+        button#getMovies(type='submit') View All Movies
+        div#moviesContainer
+
+        button#getGenres(type='submit') View All Genres
+        div#genresContainer
       //- h2 Movie Search Engine
       //- form#searchForm
       //-   input#searchField.form-control(type='text' name='searchField' placeholder='Seach for a movie...')
@@ -10,13 +18,12 @@ block content
       //-   button#searchBtn(type='submit') Search
       //- 
       //- //- a#historyLink(href='history') Look up my search history
+      div#main
+        h4 My favorites
+          ul
+            each favorite in favorites
+              li= favorite.title
 
-      a#logoutlink(href='logout') Log Out
-
-      div#responseContainer
-        ul
-          each favorite in favorites
-            li= favorite.title
 
 
     else
