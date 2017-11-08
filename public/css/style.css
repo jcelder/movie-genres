@@ -5,24 +5,10 @@ body {
   font-size: 16px;
 }
 
-h2, h4 {
+h2, h4, .row, .favorites {
   text-align: center;
 }
 
-.row, .favorites {
-  text-align: center;
-}
-
-
-/*button {
-  display: block;
-  box-shadow: 2px 2px;
-  padding: 5px 10px;
-  margin: 25px 10px;
-  background-color: white;
-  border: 1px solid black;
-  font-size: 20px;
-}*/
 
 .btn {
   border: 1px solid black;
@@ -43,42 +29,9 @@ h2, h4 {
 
 .signup, .login {
   display: inline-block;
-  /*border: 1px solid black;*/
-  /*margin: 10px;*/
 }
-
-ul {
-  list-style: none;
-}
-
-li {
-  padding: 10px;
-}
-/*a {
-  display: block;
-  margin: 15px;
-}*/
-
-/*table, td, th {
-  border: 2px solid black;
-  border-collapse: collapse;
-  padding: 5px;
-}
-
-th {
-  background-color: lightgray;
-  text-align: center;
-}*/
 
 p {
   color: red;
 }
 
-/*li.movieInfo {
-  color: blue;
-  padding: 5px;
-}
-
-li.movieInfo a {
-  display: inline;
-}*/
