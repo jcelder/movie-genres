@@ -5,15 +5,17 @@ block content
     a#logoutlink(href='logout') Log Out
   else
     h1 #{title}
+    div.form-group
     form(method='POST' action='/login')
+      div.form-group
       label(for='email') Email:
       input#email.form-control(type='email' name='email' placeholder='email')
-      br
-
+      //- br
+      div.form-group
       label(for='password') Password:
       input#password.form-control(type='password' name='password' placeholder='password')
-      br
+      //- br
 
       p #{error}
 
-      button(type='submit') Log In
+      button.btn.btn-default(type='submit') Log In
