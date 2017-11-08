@@ -12,27 +12,6 @@ h2, h4 {
 header {
   height: 100px;
 }
-/*form {
-  width: 30%;
-}*/
-
-/*label {
-  display: inline-block;
-  width: 25%;
-}
-
-input {
-  padding: 5px;
-  margin-bottom: 20px;
-  border: 1px solid black;
-  font-size: 14px;
-}
-
-input#searchField {
-  display: inline-block;
-  width: 70%;
-  box-shadow: 2px 2px;
-}*/
 
 button {
   display: block;
@@ -56,6 +35,13 @@ button#logout {
   float: right;
 }
 
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+}
 /*a {
   display: block;
   margin: 15px;
